@@ -1,0 +1,182 @@
+{
+  "references": {
+    "file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle": {
+      "crossReference": {
+        "5": {
+          "endColumn": 35,
+          "endLine": 17,
+          "ref": null,
+          "startCol": 8,
+          "startLine": 17
+        },
+        "27": {
+          "endColumn": 20,
+          "endLine": 25,
+          "ref": null,
+          "startCol": 8,
+          "startLine": 25
+        },
+        "9": {
+          "endColumn": 41,
+          "endLine": 26,
+          "ref": null,
+          "startCol": 8,
+          "startLine": 26
+        },
+        "11": {
+          "endColumn": 21,
+          "endLine": 37,
+          "ref": null,
+          "startCol": 8,
+          "startLine": 27
+        },
+        "12": {
+          "endColumn": 29,
+          "endLine": 28,
+          "ref": null,
+          "startCol": 12,
+          "startLine": 28
+        },
+        "13": {
+          "endColumn": 21,
+          "endLine": 31,
+          "ref": null,
+          "startCol": 12,
+          "startLine": 29
+        },
+        "14": {
+          "endColumn": 59,
+          "endLine": 30,
+          "ref": null,
+          "startCol": 16,
+          "startLine": 30
+        },
+        "15": {
+          "endColumn": 21,
+          "endLine": 31,
+          "ref": null,
+          "startCol": 16,
+          "startLine": 31
+        },
+        "18": {
+          "endColumn": 35,
+          "endLine": 34,
+          "ref": null,
+          "startCol": 12,
+          "startLine": 32
+        },
+        "19": {
+          "endColumn": 30,
+          "endLine": 33,
+          "ref": null,
+          "startCol": 16,
+          "startLine": 33
+        },
+        "20": {
+          "endColumn": 35,
+          "endLine": 34,
+          "ref": null,
+          "startCol": 16,
+          "startLine": 34
+        }
+      },
+      "uri": "/home/madytyoo/Downloads/xcode-navigation/rpg-sample/python/Sample.py"
+    },
+    "file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/python/Sample.py": {
+      "crossReference": {
+        "17": {
+          "endColumn": 39,
+          "endLine": 5,
+          "ref": null,
+          "startCol": 0,
+          "startLine": 5
+        },
+        "19": {
+          "endColumn": 16,
+          "endLine": 29,
+          "ref": null,
+          "startCol": 10,
+          "startLine": 27
+        },
+        "22": {
+          "endColumn": 31,
+          "endLine": 9,
+          "ref": null,
+          "startCol": 12,
+          "startLine": 9
+        },
+        "25": {
+          "endColumn": 16,
+          "endLine": 29,
+          "ref": null,
+          "startCol": 10,
+          "startLine": 27
+        },
+        "26": {
+          "endColumn": 31,
+          "endLine": 9,
+          "ref": null,
+          "startCol": 12,
+          "startLine": 9
+        },
+        "27": {
+          "endColumn": 18,
+          "endLine": 25,
+          "ref": null,
+          "startCol": 12,
+          "startLine": 11
+        },
+        "28": {
+          "endColumn": 28,
+          "endLine": 12,
+          "ref": null,
+          "startCol": 16,
+          "startLine": 12
+        },
+        "29": {
+          "endColumn": 22,
+          "endLine": 16,
+          "ref": null,
+          "startCol": 16,
+          "startLine": 13
+        },
+        "30": {
+          "endColumn": 32,
+          "endLine": 14,
+          "ref": null,
+          "startCol": 20,
+          "startLine": 14
+        },
+        "31": {
+          "endColumn": 26,
+          "endLine": 15,
+          "ref": null,
+          "startCol": 20,
+          "startLine": 15
+        },
+        "32": {
+          "endColumn": 22,
+          "endLine": 21,
+          "ref": null,
+          "startCol": 16,
+          "startLine": 18
+        },
+        "33": {
+          "endColumn": 30,
+          "endLine": 19,
+          "ref": null,
+          "startCol": 20,
+          "startLine": 19
+        },
+        "34": {
+          "endColumn": 33,
+          "endLine": 20,
+          "ref": null,
+          "startCol": 20,
+          "startLine": 20
+        }
+      },
+      "uri": "/home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle"
+    }
+  }
+}

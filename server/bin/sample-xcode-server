@@ -1,0 +1,9 @@
+#!/bin/sh
+
+##directory where jar file is located
+dir=/home/madytyoo/Downloads/xcode-navigation/server/bin
+
+$JAVA_HOME/bin/java -jar $dir/server-all.jar
+
+
+

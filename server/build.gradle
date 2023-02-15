@@ -1,0 +1,120 @@
+buildscript {
+    ext.kotlin_version = '1.6.0'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+plugins {
+    id 'java'
+}
+
+group 'com.strumenta.pli'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+apply plugin: 'antlr'
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+mainClassName  = 'com.strumenta.rpg.lsp.MainKt'
+
+def antlrVersion = '4.11.1'
+def kolasuVersion  = '1.4.11'
+def generatedMain = "src/main/java"
+def generatedMainFile = file(generatedMain)
+
+dependencies {
+
+    implementation "org.antlr:antlr4-runtime:$antlrVersion"
+
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    implementation 'org.eclipse.lsp4j:org.eclipse.lsp4j:0.17.0'
+    implementation "org.eclipse.lsp4j:org.eclipse.lsp4j.jsonrpc:0.17.0"
+
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+
+    implementation 'com.github.ajalt.clikt:clikt:3.2.0'
+    implementation 'org.slf4j:slf4j-api:1.7.28'
+    implementation 'org.slf4j:slf4j-simple:1.7.30'
+
+    implementation group: 'org.kohsuke', name: 'github-api', version: '1.313'
+
+    implementation 'com.beust:klaxon:5.5'
+
+    testImplementation "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.7.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+
+configurations.all() {
+    resolutionStrategy.force "org.antlr:antlr4-runtime:$antlrVersion"
+    resolutionStrategy.force "org.antlr:antlr4-tool:$antlrVersion"
+}
+
+generateGrammarSource {
+    inputs.files fileTree('src/main/antlr').include('**/*.g4')
+    maxHeapSize = "64m"
+    arguments += ['-package', 'com.pli.compiler.parser']
+    outputDirectory = file(generatedMain + "/com/pli/compiler/parser")
+}
+
+compileJava.dependsOn generateGrammarSource
+compileJava.source generatedMainFile, sourceSets.main.java
+
+compileKotlin {
+    source generatedMainFile, sourceSets.main.java, sourceSets.main.kotlin
+    kotlinOptions.freeCompilerArgs += ["-Xuse-experimental=kotlin.ExperimentalUnsignedTypes"]
+    dependsOn generateGrammarSource
+}
+
+
+clean {
+    delete file(generatedMain)
+    mkdir generatedMain
+}
+
+
+test {
+    testLogging {
+        events "failed"
+    }
+}
+
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName = project.name + '-all'
+    archiveVersion = ''
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+    with jar
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}

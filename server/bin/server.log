@@ -1,0 +1,68 @@
+2023-02-08 16:03:26:731 +0100 [main] INFO com.strumenta.rpg.lsp.server.RPGLanguageServer - connect
+2023-02-08 16:03:26:732 +0100 [main] INFO com.strumenta.rpg.lsp.server.RPGWorkspaceService - connect
+2023-02-08 16:03:26:733 +0100 [main] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - connect
+2023-02-08 16:03:26:817 +0100 [async0] INFO com.strumenta.rpg.lsp.server.RPGLanguageServer - initialize
+2023-02-08 16:03:26:893 +0100 [async0] INFO com.strumenta.rpg.lsp.server.RPGLanguageServer - Adding workspace file:///home/madytyoo/Downloads/xcode-navigation/rpg-sample to source path true 1
+2023-02-08 16:03:26:894 +0100 [async0] DEBUG com.strumenta.rpg.lsp.server.RPGLanguageServer - Adding file /home/madytyoo/Downloads/xcode-navigation/rpg-sample/index/Sample.idx to workspace
+2023-02-08 16:03:26:894 +0100 [pool-1-thread-1] DEBUG com.strumenta.rpg.lsp.server.RPGLanguageServer - Parser started : Sample.idx 1674739038839
+2023-02-08 16:03:27:022 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGWorkspaceService - didChangeConfiguration
+2023-02-08 16:03:27:025 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - didOpen: file:///home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle
+2023-02-08 16:03:27:084 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - documentSymbol  DocumentSymbolParams [
+  textDocument = TextDocumentIdentifier [
+    uri = "file:///home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle"
+  ]
+  workDoneToken = null
+  partialResultToken = null
+]
+2023-02-08 16:03:27:867 +0100 [pool-1-thread-1] DEBUG com.strumenta.rpg.lsp.server.RPGLanguageServer - Parser completed: Sample.idx in 973 ms
+2023-02-08 16:03:34:618 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - definition file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle/py 9,28
+2023-02-08 16:03:34:619 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - xuri: file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle
+2023-02-08 16:03:34:619 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - xuri Found
+2023-02-08 16:03:34:620 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - index search time: 0 ms
+2023-02-08 16:03:34:620 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - definition Location [
+  uri = "/home/madytyoo/Downloads/xcode-navigation/rpg-sample/python/Sample.py"
+  range = Range [
+    start = Position [
+      line = 26
+      character = 8
+    ]
+    end = Position [
+      line = 26
+      character = 41
+    ]
+  ]
+]
+2023-02-08 16:03:38:669 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - definition file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/python/Sample.py/rpgle 26,41
+2023-02-08 16:03:38:670 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - xuri: file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/python/Sample.py
+2023-02-08 16:03:38:670 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - xuri Found
+2023-02-08 16:03:38:671 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - definition Location [
+  uri = "/home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle"
+  range = Range [
+    start = Position [
+      line = 9
+      character = 12
+    ]
+    end = Position [
+      line = 9
+      character = 31
+    ]
+  ]
+]
+2023-02-08 16:03:43:563 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - definition file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle 9,31
+2023-02-08 16:03:48:718 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - definition file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle/py 9,31
+2023-02-08 16:03:48:718 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - xuri: file:/home/madytyoo/Downloads/xcode-navigation/rpg-sample/rpgle/Sample.rpgle
+2023-02-08 16:03:48:718 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - xuri Found
+2023-02-08 16:03:48:719 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - index search time: 0 ms
+2023-02-08 16:03:48:719 +0100 [client] INFO com.strumenta.rpg.lsp.server.RPGTextDocumentService - definition Location [
+  uri = "/home/madytyoo/Downloads/xcode-navigation/rpg-sample/python/Sample.py"
+  range = Range [
+    start = Position [
+      line = 26
+      character = 8
+    ]
+    end = Position [
+      line = 26
+      character = 41
+    ]
+  ]
+]
